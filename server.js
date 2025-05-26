@@ -17,7 +17,7 @@ app.use(
 app.use(express.json());
 
 // Directorio base donde buscar las transformaciones
-const BASE_DIR = "S:\\Trabajos\\nuxway\\pentaho_reports";
+const BASE_DIR = "C:\\Users\\NUXWAY\\Documents\\Pentaho Saves";
 
 // Ruta para listar transformaciones disponibles
 app.get("/listar-transformaciones", (req, res) => {
@@ -47,7 +47,7 @@ app.post("/ejecutar-etl", (req, res) => {
     return res.status(400).json({ error: "No se especificó la transformación" });
   }
 
-  const panPath = `"S:\\Trabajos\\nuxway\\data-integration\\pan.bat"`;
+  const panPath = `"C:\\Users\\NUXWAY\\Desktop\\Proyecto John-Herramientas\\Pentaho\\data-integration\\pan.bat"`;
 
   // Construimos el comando correctamente
   let command = `${panPath} /file:"${ktrPath}"`;
